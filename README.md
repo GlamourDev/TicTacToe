@@ -1,5 +1,4 @@
 # Tic-Tac-Toe
-==================
 A simple tic-tac-toe game with AI. It has scoreboard tracking. Randomizes whether player or AI starts the game. Visually stunning. It is completely responsive also.
 
 > A Vue.js project

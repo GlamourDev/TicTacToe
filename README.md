@@ -1,7 +1,7 @@
 # tictactoe
 
 > A Vue.js project
-
+![](ttt.gif)
 ## Build Setup
 
 ``` bash

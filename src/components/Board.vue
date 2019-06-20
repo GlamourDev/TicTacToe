@@ -1,6 +1,10 @@
 <template>
   <div class="board">
     <board-cell v-for="(cell, key) in board" :key="key" :property="cell" :index="key"></board-cell>
+    <div>
+    <h3>W:{{ winCount }}</h3>
+    <h3>L:{{ loseCount }}</h3>
+    </div>
   </div>
 </template>
 
@@ -22,6 +26,8 @@ export default {
   store: {
     board: 'board.board',
     winner: 'board.winner',
+    loseCount: "board.winnerAi",
+    winCount: "board.winnerPlayer"
   },
   components: {
     BoardCell,

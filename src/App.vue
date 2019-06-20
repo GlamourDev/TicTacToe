@@ -6,9 +6,9 @@
 
 <script>
 export default {
-  name: "app",
-  store: ["userid"],
-  components: {}
+  name: 'app',
+  store: ['userid'],
+  components: {},
 };
 </script>
 

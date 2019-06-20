@@ -32,6 +32,7 @@ export default {
     setPlayerProperty() {
       if (!this.property && this.board.enable) {
         this.board.setPlayerProperty(this.index);
+        this.$store.stringcollection.setTemplates('gameProgress');
       }
     },
   },

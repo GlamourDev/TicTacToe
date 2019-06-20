@@ -19,11 +19,17 @@
 import BoardCell from './BoardCell.vue';
 
 export default {
-    store: {
-    board: "board.board",
+  store: {
+    board: 'board.board',
+    winner: 'board.winner',
   },
   components: {
     BoardCell,
+  },
+  watch: {
+    winner() {
+      this.$router.push('/gameover');
+    },
   },
 };
 </script>

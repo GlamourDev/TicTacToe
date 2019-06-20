@@ -37,17 +37,14 @@ export default class Board {
     this.turnCounter = 0;
     this.getLocalStorage();
     this.whoStart();
-
-    if (this.gameStarting) {
-      console.log("TÖÖTAB")
-    }
   }
 
   enableSwitch() {
     this.gameStarting = true;
     return (this.enable = !this.enable);
   }
-  //fetching W/L from LS
+
+  // fetching W/L from LS
   getLocalStorage() {
     if (localStorage.getItem('winCount') !== null) {
       this.winnerPlayer = JSON.parse(localStorage.winCount);
@@ -60,20 +57,19 @@ export default class Board {
   whoStart() {
     // making sure that this method will be ran once
     let executed = false;
-/*     this.enableSwitch() */
     if (!executed) {
       executed = true;
 
       const decideWhoStart: number = Math.ceil(Math.random() * 2);
       console.log(decideWhoStart);
       if (decideWhoStart === 1) {
-        this.enableSwitch()
-        console.log('Ai has first turn',this.gameStarting);
-        
+        this.enableSwitch();
+        console.log('Ai has first turn', this.gameStarting);
+
         this.calculateAITurn();
       }
       if (decideWhoStart === 2) {
-        console.log('You have first turn',this.gameStarting);
+        console.log('You have first turn', this.gameStarting);
       }
     }
   }
@@ -183,7 +179,6 @@ export default class Board {
       const movesCombined = [...topPriorityCells, ...anotherCells];
       const dumbMoves: any = this.rand(movesCombined);
       const smartMoves: any = topPriorityCells;
-      /* console.log('Arr3:', arr3, 'Arr4:', arr4) */
       this.setCellProperty('ai', [smartMoves].shift());
     } else {
       anotherCells.length ? this.setCellProperty('ai', anotherCells.shift()) : '';

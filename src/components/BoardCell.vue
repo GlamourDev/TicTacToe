@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .board-cell {
   width: 6.8em;
   height: 6.8em;
@@ -47,10 +47,22 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #EBEEE7;
+  background-color: #14bdac;;
   border-radius: 4px;
   box-sizing: border-box;
   transition: background-color 250ms;
+
+  &__enable {
+    cursor: pointer;
+  }
+
+  &__player {
+    color: #0000008a;
+  }
+
+  &__ai {
+    color: #f2ebd3;
+  }
 }
 
 </style>

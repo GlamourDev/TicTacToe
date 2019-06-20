@@ -1,8 +1,8 @@
 <template>
   <div class="board">
     <board-cell v-for="(cell, key) in board" :key="key" :property="cell" :index="key"></board-cell>
-    <div>
-    <h3>W:{{ winCount }}</h3>
+    <div class="counter-holder">
+    <h3 style="margin-right:10px;">W:{{ winCount }}</h3>
     <h3>L:{{ loseCount }}</h3>
     </div>
   </div>
@@ -17,6 +17,11 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.counter-holder {
+  margin-top:10px;
+  display: flex;
+}
 </style>
 
 <script>
@@ -26,8 +31,8 @@ export default {
   store: {
     board: 'board.board',
     winner: 'board.winner',
-    loseCount: "board.winnerAi",
-    winCount: "board.winnerPlayer"
+    loseCount: 'board.winnerAi',
+    winCount: 'board.winnerPlayer',
   },
   components: {
     BoardCell,

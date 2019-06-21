@@ -20,6 +20,7 @@ A simple tic-tac-toe game with AI. It has scoreboard tracking. Randomizes whethe
 ├── assets
 │   ├── reset.scss
 │   └── styles.scss
+│
 ├── components
 │   ├── Board.vue
 │   ├── BoardCell.vue
@@ -28,7 +29,7 @@ A simple tic-tac-toe game with AI. It has scoreboard tracking. Randomizes whethe
 │   
 ├── store
 │   ├── component
-│   │   ├── index.js
+│   │   ├── index.ts
 │   │   └── board.ts
 │   │   
 │   └── index.ts

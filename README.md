@@ -37,6 +37,7 @@ A simple tic-tac-toe game with AI. It has scoreboard tracking. Randomizes whethe
 ├── views
 │   ├── Game.vue
 │   └── GameOver.vue
+│
 ├── App.vue
 ├── main.ts
 ├── router.ts
